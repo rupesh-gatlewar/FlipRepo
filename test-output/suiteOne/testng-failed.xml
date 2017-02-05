@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="Failed suite [suiteOne]" parallel="tests">
+  <parameter name="browser" value="firefox"/>
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="com.test.utilities.ScreenshotListener"/>
+  </listeners>
+  <test name="testTwo(failed)" parallel="tests">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="com.test.flipkart.SearchProduct">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="searchProduct"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.test.flipkart.SearchProduct -->
+    </classes>
+  </test> <!-- testTwo(failed) -->
+</suite> <!-- Failed suite [suiteOne] -->

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="suiteOne">
+
+	<listeners>
+		<listener class-name="com.test.utilities.AnnotationTransformer"></listener>
+	</listeners>
+	
+	<test name="testOne">
+		<classes>
+			<class name="com.test.flipkart.BaseTest" />
+		</classes>
+	</test>
+	
+</suite>

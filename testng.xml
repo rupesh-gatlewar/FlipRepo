@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="suiteOne" parallel="tests" thread-count="2">
+
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="com.test.utilities.ScreenshotListener" />
+	</listeners>
+	
+	<test name="testTwo">
+		<parameter name="browser" value="firefox" />
+		<classes>
+			<class name="com.test.flipkart.SearchProduct" />
+		</classes>
+	</test>
+
+</suite>
