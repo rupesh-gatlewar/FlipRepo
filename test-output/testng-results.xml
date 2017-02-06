@@ -1,17 +1,122 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="1" failed="1" ignored="0" total="3" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="10755" started-at="2017-02-04T08:25:58Z" finished-at="2017-02-04T08:26:08Z">
+  <suite name="suiteOne" duration-ms="34796" started-at="2017-02-06T10:50:23Z" finished-at="2017-02-06T10:50:57Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="10755" started-at="2017-02-04T08:25:58Z" finished-at="2017-02-04T08:26:08Z">
-      <class name="com.test.libs.GmailTest">
-        <test-method status="PASS" signature="test()[pri:0, instance:com.test.libs.GmailTest@685cb137]" name="test" duration-ms="10742" started-at="2017-02-04T13:55:58Z" finished-at="2017-02-04T13:56:08Z">
+    <test name="testTwo" duration-ms="34796" started-at="2017-02-06T10:50:23Z" finished-at="2017-02-06T10:50:57Z">
+      <class name="com.test.flipkart.SearchProduct">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.flipkart.SearchProduct@1e7c7811]" name="beforeTest" is-config="true" duration-ms="5180" started-at="2017-02-06T16:20:23Z" finished-at="2017-02-06T16:20:28Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- com.test.libs.GmailTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- beforeTest -->
+        <test-method status="SKIP" signature="searchProduct()[pri:0, instance:com.test.flipkart.SearchProduct@1e7c7811]" name="searchProduct" duration-ms="12418" started-at="2017-02-06T16:20:28Z" finished-at="2017-02-06T16:20:40Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Unable to perform click action on element[[FirefoxDriver: firefox on MAC (23a75a4c-a3e9-7d44-bcdd-244095edf377)] -> css selector: #nav-search-submit-text]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Unable to perform click action on element[[FirefoxDriver: firefox on MAC (23a75a4c-a3e9-7d44-bcdd-244095edf377)] -> css selector: #nav-search-submit-text]
+	at com.test.accelarators.ActionEngine.click(ActionEngine.java:110)
+	at com.test.libs.AppLogin.searchItem(AppLogin.java:27)
+	at com.test.flipkart.SearchProduct.searchProduct(SearchProduct.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.flipkart.SearchProduct@1e7c7811]" name="afterTest" is-config="true" duration-ms="122" started-at="2017-02-06T16:20:40Z" finished-at="2017-02-06T16:20:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.flipkart.SearchProduct@1e7c7811]" name="beforeTest" is-config="true" duration-ms="5827" started-at="2017-02-06T16:20:40Z" finished-at="2017-02-06T16:20:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="FAIL" signature="searchProduct()[pri:0, instance:com.test.flipkart.SearchProduct@1e7c7811]" name="searchProduct" duration-ms="9429" started-at="2017-02-06T16:20:46Z" finished-at="2017-02-06T16:20:56Z">
+          <exception class="java.lang.RuntimeException">
+            <message>
+              <![CDATA[Unable to perform click action on element[[FirefoxDriver: firefox on MAC (e3e70157-27e3-7a42-bf24-bfc05bd06304)] -> css selector: #nav-search-submit-text]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.RuntimeException: Unable to perform click action on element[[FirefoxDriver: firefox on MAC (e3e70157-27e3-7a42-bf24-bfc05bd06304)] -> css selector: #nav-search-submit-text]
+	at com.test.accelarators.ActionEngine.click(ActionEngine.java:110)
+	at com.test.libs.AppLogin.searchItem(AppLogin.java:27)
+	at com.test.flipkart.SearchProduct.searchProduct(SearchProduct.java:14)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.retryFailed(Invoker.java:998)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1200)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.RuntimeException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- searchProduct -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.flipkart.SearchProduct@1e7c7811]" name="afterTest" is-config="true" duration-ms="159" started-at="2017-02-06T16:20:57Z" finished-at="2017-02-06T16:20:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.test.flipkart.SearchProduct -->
+      <class name="com.test.flipkart.LoginTest">
+        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:com.test.flipkart.LoginTest@7a3d45bd]" name="beforeTest" is-config="true" duration-ms="8269" started-at="2017-02-06T16:20:23Z" finished-at="2017-02-06T16:20:31Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="loginTest()[pri:0, instance:com.test.flipkart.LoginTest@7a3d45bd]" name="loginTest" duration-ms="12149" started-at="2017-02-06T16:20:31Z" finished-at="2017-02-06T16:20:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginTest -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.test.flipkart.LoginTest@7a3d45bd]" name="afterTest" is-config="true" duration-ms="836" started-at="2017-02-06T16:20:43Z" finished-at="2017-02-06T16:20:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- com.test.flipkart.LoginTest -->
+    </test> <!-- testTwo -->
+  </suite> <!-- suiteOne -->
 </testng-results>

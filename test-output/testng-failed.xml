@@ -1,13 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite thread-count="2" name="Failed suite [suiteOne]" parallel="classes">
+  <listeners>
+    <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    <listener class-name="com.test.utilities.ScreenshotListener"/>
+  </listeners>
+  <test name="testTwo(failed)" parallel="classes">
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="com.test.libs.GmailTest">
+      <class name="com.test.flipkart.SearchProduct">
         <methods>
-          <include name="test"/>
+          <include name="beforeTest"/>
+          <include name="searchProduct"/>
+          <include name="afterTest"/>
         </methods>
-      </class> <!-- com.test.libs.GmailTest -->
+      </class> <!-- com.test.flipkart.SearchProduct -->
+      <class name="com.test.flipkart.LoginTest">
+        <methods>
+          <include name="beforeTest"/>
+          <include name="afterTest"/>
+        </methods>
+      </class> <!-- com.test.flipkart.LoginTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- testTwo(failed) -->
+</suite> <!-- Failed suite [suiteOne] -->

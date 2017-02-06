@@ -10,7 +10,7 @@ public class Retry implements IRetryAnalyzer{
       // set counter to 0
        int minretryCount=0;
       // set maxcounter value this will execute our test 3 times             
-      int maxretryCount=2;
+      int maxretryCount=0;
       // override retry Method
        public boolean retry(ITestResult result) {
             // this will run until max count completes if test pass within this frame it will come out of for loop
